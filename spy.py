@@ -9,11 +9,11 @@ s = requests.Session()
 
 
 #商户列表
-comlist = 'http://s.ruiyinxin.com/agent/ims/merch/list.do'
+comlist = 'http://xxx.com'
 #登陆页
-urllogin = 'http://s.ruiyinxin.com/agent/checkLogin.do'
+urllogin = 'http://xxx.com/Login.do'
 #消费页
-urllist = 'http://s.ruiyinxin.com/agent/ims/tranLsH/list.do'
+urllist = 'http://xxx.com/list.do'
 
 class catxls():
     headers = {
@@ -22,9 +22,9 @@ class catxls():
           'Accept-Language':'zh-CN,zh;q=0.8,en;q=0.6',
           'Connection':'keep-alive',
           'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8',
-          'Host':'s.ruiyinxin.com',
-          'Origin':'http://s.ruiyinxin.com',
-          'Referer':'http://s.ruiyinxin.com/agent/ims/tranLsH/init.do',
+          'Host':'xxx.com',
+          'Origin':'http://xxx.com',
+          'Referer':'http://xxx.com/agent/ims/tranLsH/init.do',
           'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
           'X-Requested-With':'XMLHttpRequest'
         }
@@ -66,16 +66,16 @@ headers = {
           'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8',
 
           'Host':'s.ruiyinxin.com',
-          'Origin':'http://s.ruiyinxin.com',
-          'Referer':'http://s.ruiyinxin.com/agent/ims/tranLsH/init.do',
+          'Origin':'xxx.com',
+          'Referer':'http://xxx.com/agent/ims/tranLsH/init.do',
           'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
           'X-Requested-With':'XMLHttpRequest'
         }
-url = 'http://s.ruiyinxin.com/agent/'
+url = 'http://xxx.com/agent/'
 #requests.get(url)
-postdata = {'loginname':'2017002025',
+postdata = {'loginname':'00001111',
             'password':'6e9729a91870fb57ce90fa19e1734656256374a'}
-picurl = 'http://s.ruiyinxin.com/agent/img/code.do?t='+str(random.random())
+picurl = 'http://xxx.com/code.do?t='+str(random.random())
 
 x = s.get(picurl)
 f = open('x.jpg','wb')
@@ -85,13 +85,13 @@ f.close()
 
 mycode = input('输入验证码：')
 postdata['code'] = mycode
-urllogin = 'http://s.ruiyinxin.com/agent/checkLogin.do'
+urllogin = 'http://xxx.com/checkLogin.do'
 #print(postdata)
 x = s.post(urllogin,data=postdata,headers=headers)
 #print(x.text)
 
 #s.get(url+'login.do')
-url1 = 'http://s.ruiyinxin.com/agent/ims/merch/list.do'
+url1 = 'http://xxx.com/list.do'
 x = s.post(url1,data={'page':1,'rows':100})
 shops = json.loads(x.content)
 shoparr = []
@@ -100,9 +100,9 @@ for shop in shops['rows']:
     shoparr.append(shop['merId'])
     
 print(shoparr)
-urllist = 'http://s.ruiyinxin.com/agent/ims/tranLsH/list.do'
+urllist = 'http://xxx.com/list.do'
 pdata = {
-        's_merId':'88779D050944411',
+        
         's_referNo':'',
         's_serialNum':'',
         's_cardNo':'',

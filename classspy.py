@@ -22,9 +22,9 @@ class catxls():
           'Accept-Language':'zh-CN,zh;q=0.8,en;q=0.6',
           'Connection':'keep-alive',
           'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8',
-          'Host':'s.ruiyinxin.com',
-          'Origin':'http://s.ruiyinxin.com',
-          'Referer':'http://s.ruiyinxin.com/agent/ims/tranLsH/init.do',
+          'Host':'xxxx.com',
+          'Origin':'http://xxx.com',
+          'Referer':'http://xxx.com/agent/ims/tranLsH/init.do',
           'User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
           'X-Requested-With':'XMLHttpRequest'
         }
@@ -75,7 +75,7 @@ fieldslist = [
 'merId'#商户编号
 ]
 cls = catxls()
-cls.getverify('http://s.ruiyinxin.com/agent/img/code.do?t='+str(random.random()))
+cls.getverify('http://xxx.com/agent/img/code.do?t='+str(random.random()))
 logindata = {'loginname':'00001111',
             'password':'6e9729a91870fb57ce90fa19e1734656256374a',
             'code':cls.verify

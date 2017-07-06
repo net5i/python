@@ -9,11 +9,11 @@ s = requests.Session()
 
 
 #商户列表
-comlist = 'http://s.ruiyinxin.com/agent/ims/merch/list.do'
+comlist = 'http://xxxx.com'
 #登陆页
-urllogin = 'http://s.ruiyinxin.com/agent/checkLogin.do'
+urllogin = 'http://xxxx.com/login.do'
 #消费页
-urllist = 'http://s.ruiyinxin.com/agent/ims/tranLsH/list.do'
+urllist = 'http://xxxx.com/list.do'
 
 class catxls():
     headers = {
@@ -76,7 +76,7 @@ fieldslist = [
 ]
 cls = catxls()
 cls.getverify('http://s.ruiyinxin.com/agent/img/code.do?t='+str(random.random()))
-logindata = {'loginname':'2017002025',
+logindata = {'loginname':'00001111',
             'password':'6e9729a91870fb57ce90fa19e1734656256374a',
             'code':cls.verify
             }
@@ -92,7 +92,7 @@ for i in comlists:
     mer.append([i['merId'],i['bankCardName']])
 
 pdata = {
-        's_merId':'88779D050944411',
+        
         's_tranDates':'20160601',
         's_tranDatee':'20170704',
         'page':1,
